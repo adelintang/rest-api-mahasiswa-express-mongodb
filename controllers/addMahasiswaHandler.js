@@ -2,7 +2,7 @@ import { response } from '../helpers/response.js';
 import { randomNim } from '../helpers/randomNim.js';
 import { DB } from '../db/connection.js';
 
-const addMahasiswaHandler = async (req, res) => {
+export const addMahasiswaHandler = async (req, res) => {
   const {
     nama,
     umur,
@@ -34,5 +34,3 @@ const addMahasiswaHandler = async (req, res) => {
 
   return response(201, 'success', { message: 'mahasiswa berhasil ditambahkan', data: { insertedId } }, res);
 };
-
-export { addMahasiswaHandler };

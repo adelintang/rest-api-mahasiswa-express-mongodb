@@ -1,7 +1,7 @@
 import { response } from '../helpers/response.js';
 import { DB } from '../db/connection.js';
 
-const deleteMahasiswaHandler = async (req, res) => {
+export const deleteMahasiswaHandler = async (req, res) => {
   let { nim } = req.params;
   nim = Number(nim);
 
@@ -14,5 +14,3 @@ const deleteMahasiswaHandler = async (req, res) => {
 
   return response(200, 'success', { message: 'Mahasiswa berhasil dihapus' }, res);
 };
-
-export { deleteMahasiswaHandler };

@@ -1,7 +1,7 @@
 import { response } from '../helpers/response.js';
 import { DB } from '../db/connection.js';
 
-const updateMahasiswaHandler = async (req, res) => {
+export const updateMahasiswaHandler = async (req, res) => {
   const {
     nama,
     umur,
@@ -35,5 +35,3 @@ const updateMahasiswaHandler = async (req, res) => {
 
   return response(200, 'success', { message: 'Mahasiswa berhasil diperbarui' }, res);
 };
-
-export { updateMahasiswaHandler };

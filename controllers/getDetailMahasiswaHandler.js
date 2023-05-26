@@ -1,7 +1,7 @@
 import { response } from '../helpers/response.js';
 import { DB } from '../db/connection.js';
 
-const getSpecifiedMahasiswaHandler = async (req, res) => {
+export const getDetailMahasiswaHandler = async (req, res) => {
   let { nim } = req.params;
   nim = Number(nim);
 
@@ -13,5 +13,3 @@ const getSpecifiedMahasiswaHandler = async (req, res) => {
 
   return response(200, 'success', { data: { mahasiswa } }, res);
 };
-
-export { getSpecifiedMahasiswaHandler };
